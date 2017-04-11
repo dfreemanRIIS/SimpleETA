@@ -21,8 +21,11 @@ class StopsViewController: UIViewController, UITableViewDataSource, UITableViewD
     let urlStringSouth:String = ""
     
     override func viewDidLoad() {
+
+        title = route.name
+
         super.viewDidLoad()
-        
+
         view.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
@@ -54,11 +57,6 @@ class StopsViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.updateViewConstraints()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.stopNames.count
     }
@@ -81,6 +79,8 @@ class StopsViewController: UIViewController, UITableViewDataSource, UITableViewD
         default:
             break
         }
+        //If we wanted to dismiss after being presented
+        //self.dismiss(animated: true, completion: nil)
     }
     
     func configureWithRoute(route: Route) {

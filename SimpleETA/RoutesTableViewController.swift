@@ -16,7 +16,9 @@ class RouteTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        title = "Routes"
+
         // Register the cell so we can dequeue it
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "routeCell")
         
@@ -35,11 +37,6 @@ class RouteTableViewController: UITableViewController {
             //Reload the tableview
             self.tableView.reloadData()
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
@@ -63,7 +60,12 @@ class RouteTableViewController: UITableViewController {
         let stopsVC = StopsViewController()
         stopsVC.companyIndex = self.companyIndex
         stopsVC.configureWithRoute(route: routes[indexPath.row])
+
+        //Go with nav controller
         navigationController?.pushViewController(stopsVC, animated: true)
+
+        //Go without nav controller
+        //present(stopsVC, animated: true, completion: nil)
     }
 
 }
