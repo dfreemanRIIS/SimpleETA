@@ -30,9 +30,23 @@ class StopsViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         selectDirection(direction: route.direction1)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "stopsCell")
-        
+        tableView.backgroundColor = .gray
         view.addSubview(segmentButton)
         view.addSubview(tableView)
+        
+        view.updateConstraintsIfNeeded()
+    }
+    
+    override func updateViewConstraints() {
+        // If you don't do this it will not work
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
+        
+        // Call the super function at the end
+        super.updateViewConstraints()
     }
     
     override func didReceiveMemoryWarning() {
