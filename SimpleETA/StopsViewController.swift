@@ -27,6 +27,7 @@ class StopsViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.delegate = self
         tableView.dataSource = self
         segmentButton = UISegmentedControl(items: [route.direction1, route.direction2])
+        segmentButton.addTarget(self, action: #selector(directionButtonClick(_:)), for: UIControlEvents.valueChanged)
         
         selectDirection(direction: route.direction1)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "stopsCell")
@@ -38,10 +39,14 @@ class StopsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     override func updateViewConstraints() {
-        // If you don't do this it will not work
+        segmentButton.translatesAutoresizingMaskIntoConstraints = false
+        segmentButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
+        segmentButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+        segmentButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10).isActive = true
+        tableView.topAnchor.constraint(equalTo: segmentButton.bottomAnchor, constant: 10).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10).isActive = true
         
@@ -66,7 +71,7 @@ class StopsViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-    @IBAction func directionButtonClick(_ sender: UISegmentedControl) {
+    func directionButtonClick(_ sender: UISegmentedControl) {
         //When the button is pressed reload the view
         switch segmentButton.selectedSegmentIndex {
         case 0:
