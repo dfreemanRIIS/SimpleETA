@@ -14,7 +14,7 @@ class BusTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Comapny"
+        title = "Company"
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "busCell")
     }
     
@@ -40,4 +40,13 @@ class BusTableViewController: UITableViewController {
         return 94
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let routeVC = RouteTableViewController()
+        routeVC.companyIndex = indexPath.row + 1
+        navigationController?.pushViewController(routeVC, animated: true)
+    }
 }
+
+
+
+
