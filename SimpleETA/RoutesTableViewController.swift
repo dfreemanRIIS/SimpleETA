@@ -58,5 +58,12 @@ class RouteTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let stopsVC = StopsViewController()
+        stopsVC.companyIndex = self.companyIndex
+        stopsVC.configureWithRoute(route: routes[indexPath.row])
+        navigationController?.pushViewController(stopsVC, animated: true)
+    }
 
 }

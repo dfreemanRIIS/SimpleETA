@@ -12,6 +12,7 @@
 		7C5C433F1E9D164700D8CA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5C433E1E9D164700D8CA60 /* Assets.xcassets */; };
 		7C5C43421E9D164700D8CA60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C5C43401E9D164700D8CA60 /* LaunchScreen.storyboard */; };
 		7C5C434A1E9D219E00D8CA60 /* RoutesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5C43491E9D219E00D8CA60 /* RoutesTableViewController.swift */; };
+		7C5C434C1E9D264F00D8CA60 /* StopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5C434B1E9D264F00D8CA60 /* StopsViewController.swift */; };
 		D53BC0981E9D18E60028CC17 /* customJSONparser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BC0951E9D18E60028CC17 /* customJSONparser.swift */; };
 		D53BC0991E9D18E60028CC17 /* JSONfetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BC0961E9D18E60028CC17 /* JSONfetcher.swift */; };
 		D53BC09A1E9D18E60028CC17 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53BC0971E9D18E60028CC17 /* Route.swift */; };
@@ -28,6 +29,7 @@
 		7C5C43411E9D164700D8CA60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C5C43431E9D164700D8CA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C5C43491E9D219E00D8CA60 /* RoutesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesTableViewController.swift; sourceTree = "<group>"; };
+		7C5C434B1E9D264F00D8CA60 /* StopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopsViewController.swift; sourceTree = "<group>"; };
 		AD863092F4801BB20F3BE8FF /* Pods_SimpleETA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleETA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D53BC0951E9D18E60028CC17 /* customJSONparser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customJSONparser.swift; sourceTree = "<group>"; };
 		D53BC0961E9D18E60028CC17 /* JSONfetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONfetcher.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				7C5C43401E9D164700D8CA60 /* LaunchScreen.storyboard */,
 				7C5C43431E9D164700D8CA60 /* Info.plist */,
 				7C5C43491E9D219E00D8CA60 /* RoutesTableViewController.swift */,
+				7C5C434B1E9D264F00D8CA60 /* StopsViewController.swift */,
 			);
 			path = SimpleETA;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				7C5C433A1E9D164700D8CA60 /* BusTableViewController.swift in Sources */,
 				7C5C43381E9D164700D8CA60 /* AppDelegate.swift in Sources */,
 				7C5C434A1E9D219E00D8CA60 /* RoutesTableViewController.swift in Sources */,
+				7C5C434C1E9D264F00D8CA60 /* StopsViewController.swift in Sources */,
 				D53BC09A1E9D18E60028CC17 /* Route.swift in Sources */,
 				D53BC0991E9D18E60028CC17 /* JSONfetcher.swift in Sources */,
 			);
